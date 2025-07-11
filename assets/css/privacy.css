@@ -1,0 +1,37 @@
+.footer {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.privacy-section {
+  max-width: 600px;
+  margin: auto;
+}
+
+.privacy-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+.privacy-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.privacy-content.open {
+  max-height: 200px;
+}

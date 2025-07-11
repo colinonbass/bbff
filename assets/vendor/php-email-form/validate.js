@@ -9,7 +9,7 @@
   let forms = document.querySelectorAll('.php-email-form');
 
   forms.forEach( function(e) {
-    e.addEventListener('submit', function(event) {
+    e.addEventListener('send', function(event) {
       event.preventDefault();
 
       let thisForm = this;
