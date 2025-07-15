@@ -32,6 +32,39 @@
 
     <!-- Privacy CSS File -->
     <link rel="stylesheet" href="assets/css/privacy.css" />
+     <style>
+    .modal-content.dark-background,
+    .modal-content.dark-background * {
+      background-color: var(--background-color) !important;
+      color: var(--default-color) !important;
+    }
+
+    .modal-content.dark-background .btn-outline-light {
+      border-color: #ccc;
+      color: #fff;
+    }
+
+    .modal-content.dark-background .btn-outline-light:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .modal-content.dark-background .modal-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .modal-content.dark-background .modal-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .modal-body.row {
+    --bs-gutter-x: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  </style>
   </head>
 
   <body class="index-page">
@@ -511,7 +544,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link">Delivery</a>
+                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#deliveryModal">Delivery</a>
                 </h4>
                 <p class="description">
                   At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -730,5 +763,31 @@
         }
       </style>
     </footer>
+    <!-- Delivery Info Modal -->
+<div class="modal fade" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content dark-background text-light">
+      <div class="modal-header border-5">
+        <h5 class="modal-title" id="deliveryModalLabel">Delivery Information</h5>
+        </style>
+      </div>
+      <div class="modal-body row align-items-center g-4 px-4 pb-4" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+        <!-- Image -->
+        <div class="col-12 col-md-5 text-center mb-4 mb-md-0" style="padding-right: 1.5rem;">
+          <img src="assets/img/delivery.jpg" alt="Delivery" class="img-fluid rounded shadow" style="max-height: 240px; object-fit: cover;" />
+        </div>
+
+        <!-- Text -->
+        <div class="col-12 col-md-7" style="padding-left: 1.5rem;">
+          <p>We offer local delivery with care and attention to detail. Whether it's for a celebration, remembrance, or a simple act of kindness, your flowers will arrive beautifully arranged and thoughtfully presented.</p>
+          <p>Click & collect is available from our flower farm in Killygordon. We'll send full instructions after your order is placed.</p>
+          <div class="text-end">
+        <button type="button" class="btn btn-outline-light mt-2" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
