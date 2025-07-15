@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - iPortfolio Bootstrap Template</title>
+  <title>Butterfly Bears Flower Farm</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,6 +27,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+    <!-- Privacy CSS File -->
+    <link rel="stylesheet" href="assets/css/privacy.css" />
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -42,50 +45,48 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
+        <img src="assets/img/bbff_logo.jpg" alt="" class="img-fluid rounded-circle" />
+      </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Alex Smith</h1>
-    </a>
+      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename text-center">Butterfly Bears Flower Farm</h1>
+      </a>
 
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
+      <div class="social-links text-center">
+        <a
+          href="https://www.facebook.com/people/Butterfly-Bears-Flower-Farm/61558521933295/?sk=about"
+          class="facebook"
+        ><i class="bi bi-facebook"></i></a>
+        <a
+          href="https://www.instagram.com/butterflybearsflowerfarm/"
+          class="instagram"
+        ><i class="bi bi-instagram"></i></a>
+        <!--  <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>-->
+      </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="indexReal.html#hero"><i class="bi bi-house navicon"></i>Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About Us</a>
+          </li>
+          <li>
+            <a href="#stock"><i class="bi bi-journal navicon"></i> Stock</a>
+          </li>
+          <li>
+            <a href="#services"><i class="bi bi-cart2 navicon"></i> Shop</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
 
   </header>
 
@@ -121,22 +122,24 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+    <footer id="footer" class="footer position-relative">
+      <div class="container">
+        <div class="footer-flex d-flex justify-content-between align-items-center flex-column flex-md-row">
+          <div class="copyright-text mb-2 mb-md-0">
+            <p><b>&copy; <span id="year"></span> Butterfly Bears Flower Farm<br></b></p>
+          </div>
+          <div class="privacy-section">
+            <div class="privacy-toggle" id="privacyToggle">
+              <span class="arrow" id="arrow">&#9654;</span>
+              <span>Privacy Notice</span>
+            </div>
+            <div class="privacy-content" id="privacyContent">
+              This website does not use cookies, analytics, or tracking technologies. Your visit is completely private.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
-
-  </footer>
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -158,7 +161,33 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      <script>
+        const toggle = document.getElementById("privacyToggle");
+        const content = document.getElementById("privacyContent");
+        const arrow = document.getElementById("arrow");
 
+        toggle.addEventListener("click", () => {
+          content.classList.toggle("open");
+          arrow.classList.toggle("rotate");
+        });
+      </script>
+      <style>
+        .footer-flex {
+          gap: 1rem;
+        }
+        @media (max-width: 767.98px) {
+          .footer-flex {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+          .copyright-text, .privacy-section {
+            width: 100%;
+          }
+        }
+</style>
 </body>
 
 </html>

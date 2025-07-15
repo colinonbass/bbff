@@ -1267,6 +1267,15 @@ section,
   color: var(--accent-color);
 }
 
+@media (min-width: 768px) {
+  .video-wrapper video {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

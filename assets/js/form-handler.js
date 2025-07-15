@@ -1,37 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("myForm");
-  const message = document.getElementById("hiddenMessage");
-  const formContainer = document.getElementById("formDiv");
+  const form = document.getElementById("contactForm");
+  const messageBox = document.getElementById("thankYouMessage");
 
-  if (form && message && formContainer) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      const formData = new FormData(form);
+    const formData = new FormData(form);
 
-      // Optional: show loading message
-      message.style.display = "block";
-      message.textContent = "Sending...";
-      formContainer.style.display = "none";
-
-      fetch("forms/contact.php", {
-        method: "POST",
-        body: formData
-      })
-        .then(response => response.text())
-        .then(data => {
-          if (data.toLowerCase().includes("success")) {
-            message.textContent = "Thank you! Your message has been sent.";
-          } else {
-            message.textContent = "Oops! Something went wrong: " + data;
-            formContainer.style.display = "block"; // allow retry
-          }
-        })
-        .catch(error => {
-          message.textContent = "Network error. Please try again.";
-          formContainer.style.display = "block";
-          console.error("Email error:", error);
-        });
+    fetch("forms/process-form.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      form.style.display = "none";
+      messageBox.style.display = "block";
+      messageBox.textContent = data;
+    })
+    .catch(() => {
+      messageBox.style.display = "block";
+      messageBox.style.color = "red";
+      messageBox.textContent = "Sorry, there was an error sending your message.";
     });
-  }
+  });
 });

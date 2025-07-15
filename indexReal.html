@@ -104,7 +104,7 @@
             <a href="#about"><i class="bi bi-person navicon"></i> About Us</a>
           </li>
           <li>
-            <a href="#stock"><i class="bi bi-journal navicon"></i> Stock</a>
+            <a href="#gallery"><i class="bi bi-camera navicon"></i> Gallery</a>
           </li>
           <li>
             <a href="#services"><i class="bi bi-cart2 navicon"></i> Shop</a>
@@ -157,8 +157,9 @@
               time.
             </div>
             <div style="width: 100%; max-width: 400px; margin: 0 auto">
-              <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61558521933295%2Fvideos%2F1190695772890048%2F&show_text=true&width=400"
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61558521933295%2Fvideos%2F1190695772890048%2F&width=400&show_text=false&height=711&appId" width="100%" height="711" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+             <!--- <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0SDUkGuQMeqmZEC8g56div9jTJUt3aKDKFg777jubyjsxxm7k7WHLv1iKQsbchU9yl%26id%3D61558521933295&show_text=true&width=400"
                 width="100%"
                 height="650"
                 style="border: none; overflow: hidden; width: 100%; background: white;"
@@ -167,7 +168,7 @@
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowtransparency="true"
-              ></iframe>
+              ></iframe>-->
             </div>
           </div>
         </div>
@@ -197,10 +198,10 @@
       <!-- /About Section -->
 
       <!-- Stock Section -->
-      <section id="stock" class="portfolio section light-background">
+      <section id="gallery" class="portfolio section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Stock</h2>
+          <h2>Gallery</h2>
           <p>
             Explore our curated selection and check back often for new
             additions. If you're looking for something specific that isn't
@@ -236,18 +237,18 @@
             >
               <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                 <div class="portfolio-content h-100">
-                  <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="" />
+                  <img src="assets/img/portfolio/wreaths1.jpg" class="img-fluid" alt="" />
                   <div class="portfolio-info">
-                    <h4>App 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                    <h4>Wreaths</h4>
+                    <p>Click the link for more info on our wreaths</p>
                     <a
-                      href="assets/img/portfolio/app-1.jpg"
+                      href="assets/img/portfolio/wreaths1.jpg"
                       title="App 1"
                       data-gallery="portfolio-gallery-app"
                       class="glightbox preview-link"
                     ><i class="bi bi-zoom-in"></i></a>
                     <a
-                      href="portfolio-details.html"
+                      href="wreaths.html"
                       title="More Details"
                       class="details-link"
                     ><i class="bi bi-link-45deg"></i></a>
@@ -464,11 +465,10 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link">Best Sellers</a>
+                  <a href="wreaths.html" class="stretched-link">Wreaths</a>
                 </h4>
                 <p class="description">
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi sint occaecati cupiditate non provident
+                   Our wreaths are hand-crafted with care using home-grown foliage and flowers from our own farm. Click the link for more infornmation.
                 </p>
               </div>
             </div>
@@ -484,7 +484,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link">Gifts</a>
+                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#voucherModal">Gift Vouchers</a>
                 </h4>
                 <p class="description">
                   Minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -524,7 +524,7 @@
               </div>
               <div>
                 <h4 class="title">
-                  <a href="service-details.html" class="stretched-link">Events and Collaborations</a>
+                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#floristModal">Florist Orders</a>
                 </h4>
                 <p class="description">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
@@ -636,7 +636,7 @@
             </div>
 
             <div class="col-lg-7">
-              <form action="forms/mail_handler.php" method="post" target="self">
+              <form id="contactForm" method="POST">
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Your Name</label>
@@ -660,6 +660,7 @@
                   <input type="submit" name="submit" value="Submit">
                 </div>
               </form>
+              <div id="thankYouMessage" style="display: none; margin-top: 1rem; color: rgb(0, 0, 0);"></div>
             </div>
             <!-- End Contact Form -->
           </div>
@@ -710,7 +711,7 @@
           </div>
         </div>
       </div>
-
+</footer>
       <!-- Scroll Top -->
       <a
         href="#"
@@ -738,6 +739,7 @@
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
+      <script src="assets/js/form-handler.js" defer></script>
       <script>
         const toggle = document.getElementById("privacyToggle");
         const content = document.getElementById("privacyContent");
@@ -762,7 +764,7 @@
           }
         }
       </style>
-    </footer>
+
     <!-- Delivery Info Modal -->
 <div class="modal fade" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -786,6 +788,69 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<!-- Gift Voucher Info Modal -->
+<div class="modal fade" id="voucherModal" tabindex="-1" aria-labelledby="voucherModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content dark-background text-light">
+      <div class="modal-header border-5">
+        <h5 class="modal-title" id="deliveryModalLabel">Gift Vouchers</h5>
+        </style>
+      </div>
+      <div class="modal-body row align-items-center g-4 px-4 pb-4" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+        <!-- Image -->
+        <div class="col-12 col-md-5 text-center mb-4 mb-md-0" style="padding-right: 1.5rem;">
+          <img src="assets/img/gift_voucher.jpg" alt="Delivery" class="img-fluid rounded shadow" style="max-height: 240px; object-fit: cover;" />
+        </div>
+
+        <!-- Text -->
+        <div class="col-12 col-md-7" style="padding-left: 1.5rem;">
+          <p>Looking for a thoughtful gift? We offer beautifully presented gift vouchers that can be used toward any of our floral arrangements or services. Perfect for any occasion and available in a range of values.</p>
+          <p>We offer next day postal delivery on voucher orders placed before 3pm. We're also happy to personalise and send directly on your behalf.</p>
+          <div class="text-end">
+        <button type="button" class="btn btn-outline-light mt-2" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Florist Orders Modal -->
+<div class="modal fade" id="floristModal" tabindex="-1" aria-labelledby="floristModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content dark-background text-light">
+
+      <!-- Modal Header -->
+      <div class="modal-header border-5">
+        <h5 class="modal-title" id="floristModalLabel">Florist Orders</h5>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body text-center px-4 pb-4" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+
+        <!-- Styled Video Container -->
+        <div class="video-wrapper mb-3" style="background-color: #0e4517; padding: 1rem; border-radius: 8px;">
+  <video controls playsinline preload="metadata" class="rounded shadow border-0 w-100"
+         style="background-color: #0e4517;">
+    <source src="assets/video/floristOrder1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+        <!-- Description Text -->
+        <p class="mt-2">
+          Learn more about how we handle and prepare florist orders with care and attention from start to finish.
+        </p>
+
+        <!-- Close Button -->
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light mt-2" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
