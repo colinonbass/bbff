@@ -1275,6 +1275,45 @@ section,
     display: block;
   }
 }
+.carousel-indicators {
+  position: static !important; /* Override Bootstrap's default absolute */
+  display: flex !important;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 1;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.carousel-indicators .active {
+  transform: scale(1.4);
+  background-color: #ffffff;
+}
+.indicator-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.active-dot {
+  background-color: #fff;
+  transform: scale(1.4);
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
