@@ -35,6 +35,8 @@
   --nav-dropdown-background-color: #0e4517; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --icon-hover-color: #0e4517; /* light green or any soft color */
+  --icon-hover-background-color: #ffffff; /* Used as the background color for icons when hovered over */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -917,11 +919,11 @@ section,
 }
 
 .services .service-item:hover .icon {
-  background: var(--surface-color);
+  background: var(--icon-hover-background-color);
 }
 
 .services .service-item:hover .icon i {
-  color: var(--accent-color);
+  color: var(--icon-hover-color);
 }
 
 .services .service-item .title {
