@@ -174,34 +174,6 @@
         </div>
       </section>
       <!-- /About Section -->
-       <!-- Info Section -->
-<section id="info" class="section">
-  <div class="container" data-aos="fade-up">
-    <div class="row align-items-center gy-4">
-      
-      <!-- Image Left -->
-      <div class="col-lg-6 text-center text-lg-start">
-        <img src="assets/img/ffoi.png" alt="Flower Farm Image" class="img-fluid">
-      </div>
-
-      <!-- Text Right -->
-      <div class="col-lg-6">
-        <p>
-          Proud member of the Flower Farmers of Ireland
-        </p>
-        <p>
-          <a href="https://www.flowerfarmersofireland.ie/" target="_blank" rel="noopener noreferrer" title="Visit Flower Farmers of Ireland">
-  www.flowerfarmersofireland.ie
-</a>
-<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- /Info Section -->
 
       <!-- Stock Section -->
       <section id="gallery" class="portfolio section light-background">
@@ -460,17 +432,17 @@
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
               data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos-delay="300"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-flower3"></i>
+                <i class="bi bi-flower1"></i>
               </div>
               <div>
                 <h4 class="title">
-                  <a href="wreaths.html" class="stretched-link">Wreaths</a>
+                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#seasonalModal">Seasonal Flowers</a>
                 </h4>
                 <p class="description">
-                   Our wreaths are hand-crafted with care using home-grown foliage and flowers from our own farm. Click the link for more infornmation.
+                  Browse our seasonal, occasional and limited edition flowers. When they're gone, they're gone!
                 </p>
               </div>
             </div>
@@ -482,11 +454,11 @@
               data-aos-delay="300"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-flower2"></i>
+                <i class="bi bi-flower1"></i>
               </div>
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#seasonalModal">Seasonal Flowers</a>
+                  <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#seasonalModal">Next</a>
                 </h4>
                 <p class="description">
                   Browse our seasonal, occasional and limited edition flowers. When they're gone, they're gone!
@@ -720,7 +692,9 @@
                     <label for="message-field" class="pb-2">Message</label>
                     <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                   </div>
-                  <input type="submit" name="submit" value="Submit">
+                  <div class="col-md-12">
+  <input type="submit" name="submit" value="Submit" class="btn-custom w-100">
+</div>
                 </div>
               </form>
               <div id="thankYouMessage" style="display: none; margin-top: 1rem; color: rgb(0, 0, 0);"></div>
@@ -739,23 +713,43 @@
       <!-- /Weather Section-->
     </main>
 
-    <footer id="footer" class="footer position-relative">
-      <div class="container">
-        <div class="footer-flex d-flex justify-content-between align-items-center flex-column flex-md-row">
-          <div class="copyright-text mb-2 mb-md-0">
-            <p><b>&copy; <span id="year"></span> Butterfly Bears Flower Farm<br></b></p>
-          </div>
-          <div class="privacy-section">
-            <div class="privacy-toggle" id="privacyToggle">
-              <span class="arrow" id="arrow">&#9654;</span>
-              <span>Privacy Notice</span>
-            </div>
-            <div class="privacy-content" id="privacyContent">
-              This website does not use cookies, analytics, or tracking technologies. Your visit is completely private.
-            </div>
-          </div>
+<footer id="footer" class="footer position-relative py-4">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start gy-4">
+
+      <!-- Left Column: Image + Text -->
+      <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+        <img src="assets/img/ffoi.jpg" alt="Flower Farm Image" class="img-fluid" style="max-width: 70px; height: auto;">
+        <div>
+          <p class="mb-1">Proud member of the Flower Farmers of Ireland</p>
+          <p class="mb-0">
+            <a href="https://www.flowerfarmersofireland.ie/" target="_blank" rel="noopener noreferrer" title="Visit Flower Farmers of Ireland">
+              www.flowerfarmersofireland.ie
+            </a>
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          </p>
         </div>
       </div>
+
+      <!-- Center Column: Copyright -->
+      <div class="col-md-4 d-flex justify-content-center">
+        <p class="mb-0"><b>&copy; <span id="year"></span> Butterfly Bears Flower Farm</b></p>
+      </div>
+
+      <!-- Right Column: Privacy Notice -->
+      <div class="col-md-4 text-center text-md-end">
+  <div class="privacy-section">
+    <div class="privacy-toggle d-inline-block" id="privacyToggle">
+      <span class="arrow" id="arrow">&#9654;</span>
+      <span>Privacy Notice</span>
+    </div>
+    <div class="privacy-content" id="privacyContent">
+      This website does not use cookies, analytics, or tracking technologies. Your visit is completely private.
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
 </footer>
       <!-- Scroll Top -->
       <a
@@ -881,17 +875,30 @@
           <div class="carousel-inner rounded shadow overflow-hidden position-relative">
             <!-- Slide 1 -->
             <div class="carousel-item active text-center">
-              <img src="assets/img/carousel/seasonal1.jpg" class="d-block w-100" alt="Spring Wreath">
+              <a href="seasonalFlowers.html#kraft-jars" class="carousel-link">
+                <img src="assets/img/seasonal/kraft.jpg" class="d-block w-100" alt="Kraft Jars">
+              </a>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item text-center">
-              <img src="assets/img/carousel/seasonal2.jpg" class="d-block w-100" alt="Summer Bouquet">
+              <a href="seasonalFlowers.html#wrapped-bouquets" class="carousel-link">
+              <img src="assets/img/seasonal/wrapped1.jpg" class="d-block w-100" alt="Wrapped Bouquets">
+              </a>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-item text-center">
-              <img src="assets/img/carousel/seasonal3.jpg" class="d-block w-100" alt="Winter Arrangement">
+              <a href="seasonalFlowers.html#box-arrangements" class="carousel-link">
+              <img src="assets/img/seasonal/box1.jpg" class="d-block w-100" alt="Box Arrangements">
+              </a>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item text-center">
+              <a href="seasonalFlowers.html#coffee" class="carousel-link">
+              <img src="assets/img/seasonal/coffee1.jpg" class="d-block w-100" alt="Coffee">
+              </a>
             </div>
 
             <!-- Left chevron -->
@@ -910,7 +917,7 @@
 
         <!-- Rotating text -->
         <div class="carousel-text mt-3 text-center" id="carouselText">
-          <p class="text-light mb-0">Celebrate spring with fresh, vibrant wreaths bursting with seasonal colour.</p>
+          <p class="text-light mb-0">Kraft jar blurb and link</p>
         </div>
 
         <!-- Indicator Circles below text -->
@@ -921,6 +928,8 @@
           data-bs-target="#seasonalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" class="indicator-dot"
           data-bs-target="#seasonalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" class="indicator-dot"
+          data-bs-target="#seasonalCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <style>
         #slideCircles .indicator-dot {
@@ -1002,9 +1011,10 @@
     const dots = document.querySelectorAll('#slideCircles .indicator-dot');
 
     const captions = [
-      "Celebrate spring with fresh, vibrant wreaths bursting with seasonal colour.",
-      "Our summer bouquets are grown, picked, and arranged with sunshine and love.",
-      "Bring warmth indoors with our handcrafted winter floral arrangements."
+      "Kraft jar blurb and link",
+      "wrapped bouquets blurb and link",
+      "Box arrangements blurb and link",
+      "Coffee blurb and link"
     ];
 
     const bsCarousel = new bootstrap.Carousel(carousel, {

@@ -23,7 +23,7 @@
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0e4517; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #050505; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -1313,6 +1313,52 @@ section,
 .active-dot {
   background-color: #fff;
   transform: scale(1.4);
+}
+
+.footer img {
+  max-width: 120px;
+  height: auto;
+}
+
+.carousel-link {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.carousel-image {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.03);
+  opacity: 0.85;
+  cursor: pointer;
+}
+.btn-custom {
+  background-color: #0e4517;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  width: 100%; /* Ensures full width */
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0b3712;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  #contact .info-wrap {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #disclaimer .col-lg-4,
+  #disclaimer .col-lg-8 {
+    text-align: center;
+  }
 }
 
 /*--------------------------------------------------------------
