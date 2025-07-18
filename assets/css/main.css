@@ -1362,7 +1362,15 @@ section,
     text-align: center;
   }
 }
-
+/* Restrict image height only on larger screens */
+@media (min-width: 992px) {
+  .modal-img-small {
+    max-height: 470px; /* Arbitrary size - adjust as needed */
+    width: auto;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
